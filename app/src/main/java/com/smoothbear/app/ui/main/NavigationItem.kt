@@ -6,6 +6,6 @@ import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class NavigationItem(var route: String, var icon: ImageVector) {
-    object MainCocktail : NavigationItem("cocktail", Icons.Outlined.ShoppingCart)
+    object MainCocktail : NavigationItem("list", Icons.Outlined.ShoppingCart)
     object ColorCocktail : NavigationItem("color", Icons.Outlined.Place)
 }

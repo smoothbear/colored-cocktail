@@ -14,8 +14,12 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
+    fun provideOkHttpClient() = OkHttpClient.Builder()
+        .build()
+
+    @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient) = Retrofit.Builder()
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         .client(okHttpClient)
         .baseUrl("http://localhost:8080")
         .build()

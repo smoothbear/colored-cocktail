@@ -19,7 +19,7 @@ fun WhiskeyApp(
             Main (
                navController = navController,
                viewModel = viewModel,
-               page = "whiskey"
+               page = "list"
             )
         }
 

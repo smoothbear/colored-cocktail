@@ -4,6 +4,7 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import com.smoothbear.app.ui.Screen
@@ -23,7 +24,7 @@ private fun CocktailNavigation(
 ) {
     val navigationItem = listOf(NavigationItem.MainCocktail, NavigationItem.ColorCocktail)
 
-    BottomNavigation() {
+    BottomNavigation {
         navigationItem.forEach {
             BottomNavigationItem(icon = {
                 Icon(

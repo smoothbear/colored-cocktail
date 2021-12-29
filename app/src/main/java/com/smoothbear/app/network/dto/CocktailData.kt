@@ -4,9 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 data class CocktailData (
 
-    @SerializedName("id")
-    var id: Int,
-
     @SerializedName("title")
     var title: String,
 
@@ -19,7 +16,7 @@ data class CocktailData (
     @SerializedName("price")
     var price: Int,
 
-    @SerializedName("image_url")
+    @SerializedName("image-url")
     var imageUrl: String
 
 )

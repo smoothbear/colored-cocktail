@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.smoothbear.app.network.CocktailService
 import com.smoothbear.app.network.dto.CocktailData
-import com.smoothbear.app.network.dto.CocktailResponse
+import com.smoothbear.app.network.dto.CocktailListResponse
 import com.smoothbear.app.viewmodel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -19,8 +19,8 @@ class CocktailViewModel @Inject constructor (
     val cocktailData: LiveData<CocktailData>
         get() = _cocktailData
 
-    private val _cocktailResponse = MutableLiveData<CocktailResponse>()
-    val cocktailResponse: LiveData<CocktailResponse>
+    private val _cocktailResponse = MutableLiveData<CocktailListResponse>()
+    val cocktailListResponse: LiveData<CocktailListResponse>
         get() = _cocktailResponse
 
     fun getCocktailInfo(id: Int) = uiScope.launch {
